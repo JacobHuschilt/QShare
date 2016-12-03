@@ -1,2 +1,8 @@
 # Include your project-specific ignores in this file
 # Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+
+# Original Image Vector File
+QShare_Logo.pxm
+
+# Mac DS Store files
+*.DS_Store
