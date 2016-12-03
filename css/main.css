@@ -94,23 +94,64 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    /*Font Stuff
+    font-family: 'Open Sans', sans-serif; 400, 600
+    font-family: 'Source Sans Pro', sans-serif; 400,700
+    */
+.main{
+    position:relative;
+    width:100%;
+    height: 100%;
+    background:url("../img/carStock.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+.container-full{
+    position:relative;
+    width:100%;
+    height:100vh;
+}
+nav{
+    position:relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+}
+.navbar-default{
+    background-color: rgba(255, 255, 255, 0.4);
+    border:none;
+}
+#logo{
+    position:absolute;
+    left:0;
+    top:6px;
+    width:auto;
+    height: 128px;
+}
+.logo-text{
+    position:absolute;
+    left: 128px;
+    top:50%;
+    transform: translateY(-50%);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+    font-size: 100px;
+}
+nav input{
+    float:right;
+    display: inline-block;
+    margin-right: 20px;
+    top:50%;
+    //transform: translateY(-50%);
+}
+footer{
+    width:100%;
+    background-color: #8e8e8e;
+    text-align: center;
+    padding: 0;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -191,8 +232,50 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media only screen and (max-width: 768px) {
     /* Style adjustments for viewports that meet the condition */
+   .navbar-header {
+       float: none;
+   }
+   .navbar-left,.navbar-right {
+       float: none !important;
+   }
+   .navbar-toggle {
+       display: block;
+   }
+
+   .navbar-collapse {
+       border-top: 1px solid transparent;
+       box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+   }
+   .navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+   	}
+       .navbar-collapse.collapse {
+           display: none!important;
+       }
+       .navbar-default .container .navbar-collapse .navbar-nav {
+           float: none;
+   		margin-top: 0px;
+   		padding-top:0px;
+   	}
+   	.navbar-nav>li {
+           float: none;
+           z-index:999;
+       }
+       .navbar-default .container .navbar-collapse .navbar-nav>li>a {
+           padding-top: 10px;
+           padding-bottom: 10px;
+   		background-color:rgba(57,53,54,0.85);
+       }
+       .collapse.in{
+     		display:block !important;
+   	}
+   	.content{
+   		width:80%;
+   	}
+   }
 }
 
 @media print,
