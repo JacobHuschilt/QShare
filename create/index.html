@@ -1,4 +1,4 @@
-±±±±±±±<!doctype html>
+<!doctype html>
 <html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
@@ -15,6 +15,29 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
+      
+<!-- This is the code for the create form  -->
+      <div class="container">
+      <form class="" action="index.html" method="post">
+        <legend>Post A Ride!</legend>
+        <pre>
+          Price:
+          <input type="number" name="price" value="">
+          Departing From:
+          <input type="text" name="departure" value="">
+          Destination:
+          <input type="text" name="destination" value="">
+          Departing on:
+          <input type="date" name="date" value="">
+          Between:
+          <input type="number" name="earlyTime" value=""> and <input type="number" name="lateTime" value="">
+          Additional Information:
+          <input type="text" name="info" value="">
+          <input type="submit" name="submit" value="Post My Ride"> <input type="reset" name="reset" value="reset">
+        </pre>
+      </form>
+      </div>
+
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -41,4 +64,3 @@
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
     </body>
-</html>
