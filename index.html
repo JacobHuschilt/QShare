@@ -1,5 +1,15 @@
 <!doctype html>
 <html class="no-js" lang="">
+
+    <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    QShare Banner Ad
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:728px;height:90px"
+         data-ad-client="ca-pub-5493170330729204"
+         data-ad-slot="1739266281"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -8,7 +18,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="shortcut icon" href="img/QShare_Favicon.ico">
         <!-- Place favicon.ico in the root directory -->
 
         <link rel="stylesheet" href="css/normalize.css">
@@ -21,12 +31,13 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+
         <div class="main">
             <nav class="navbar navbar-default">
                 <div class="container nav-container">
                     <a href="index.html" class="navbar-brand">
                         <img src="img/QShare_Logo@Small.png" alt="QShare Logo" id="logo">
-                        <span>Share</span>
+                        <p class="logo-text">Share</p>
                     </a>
                     <div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -41,8 +52,8 @@
                                 <li><p>User Name</p></li>
     							<li><input type="text" id="username"></li>
                                 <li><p>Password</p></li>
-                                <li><input type="text" id="password"></li>
-    							<li><button type="button" class="btn btn-default" id="login">Log In</button></li>
+                                <li><input type="password" id="password"></li>
+    							<li><input type="button" class="btn btn-default" id="login" value="Log In"></input></li>
     						</ul>
                         </form>
 					</div>
@@ -50,14 +61,27 @@
             </nav>
             <div class="container-full" id="main-background">
                 <div class="register">
-                    <p>Register for a new account.</p>
+                    <h4>Register for a new account.</h4>
+                    <p><span class="glyphicon glyphicon-list-alt"></span></p>
                     <form action="register.php">
-                        <input type="text">
+                        <p>First Name:</p>
+                        <input name="first-name" type="text">
+                        <p>Last Name:</p>
+                        <input name="last-name" type="text">
+                        <p>Date of Birth:</p>
+                        <input name="dob" type="date">
+                        <p>Email:</p>
+                        <input name="email" type="text" placeholder="example@example.com">
+                        <p>Password:</p>
+                        <input name="pass1" type="password">
+                        <p>Re-enter Password:</p>
+                        <input name="pass2" type="password">
+                        <input type="button" class="btn btn-default" value="REGISTER" id="register">
                     </form>
                 </div>
             </div>
             <footer>
-                <p>Four Muskateers © 2016</p>
+                <p>Four Muskateers ©     2016</p>
             </footer>
         </div>
 
@@ -66,11 +90,6 @@
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-
-        <!-- Actual code for Button -->
-        <div class="fb-login-button" data-max-rows="1" data-size="medium"
-         data-show-faces="false" data-auto-logout-link="false"></div>
-
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
