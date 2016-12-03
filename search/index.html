@@ -35,7 +35,7 @@
         </ul>
 
         <center><section class="loginform cf">
-        <form name="register" action="homePage.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+        <form name="register" action="search.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
           <ul>
               <li><label for="departure"> Departure</label>
               <input name="departure" placeholder="Ex. Toronto" required></li>
@@ -48,7 +48,7 @@
               <li><br><label for="timeWindow"> Time Window(Start)</label>
               <input name="startTime" placeholder="Ex. 6:00" required></li>
               <li><label for="timeWindow"> Time Window(End) </label>
-              <input name="destination" placeholder="Ex. 18:00" required></li>
+              <input name="endTime" placeholder="Ex. 18:00" required></li>
 
               <li><label for="cost"> Max Price</label>
               <input name="cost" placeholder="Ex. $50" required></li>
@@ -57,9 +57,6 @@
 
               <input type="submit" value="Search">
           </ul>
-
-
-
         </form>
         </section>
         </center>
