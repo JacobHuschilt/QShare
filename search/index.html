@@ -1,4 +1,4 @@
-±±±±±±±<!doctype html>
+<!doctype html>
 <html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
@@ -9,9 +9,8 @@
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
-
-        <link rel="stylesheet" href="../css/normalize.css">
-        <link rel="stylesheet" href="../css/main.css">
+        <link href="search.css" type= "text/css" rel="stylesheet" >
+      	<link rel="stylesheet" href="./normalize.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
@@ -24,6 +23,47 @@
 
         </nav>
         <section class="main">
+
+
+        <!-- Search functionality will be put here-->
+        <ul class="tabrow">
+        <li class="selected">
+              <a href="../index.html"> Landing Page </a></li>
+          <li><a href="index.html">Search Page </a> </li>
+          <li><a href="../create/index.html">Create Page </a></li>
+          <li><a href="../about/index.html">About </a></li>
+        </ul>
+
+        <center><section class="loginform cf">
+        <form name="register" action="homePage.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+          <ul>
+              <li><label for="departure"> Departure</label>
+              <input name="departure" placeholder="Ex. Toronto" required></li>
+              <li><label for="destination"> Destination </label>
+              <input name="destination" placeholder="Ex. Kingston" required></li>
+              <li>
+              <br>
+              <label for ="date"> Travel Date </label>
+              <input type="date" name="travelDate">
+              <li><br><label for="timeWindow"> Time Window(Start)</label>
+              <input name="startTime" placeholder="Ex. 6:00" required></li>
+              <li><label for="timeWindow"> Time Window(End) </label>
+              <input name="destination" placeholder="Ex. 18:00" required></li>
+
+              <li><label for="cost"> Max Price</label>
+              <input name="cost" placeholder="Ex. $50" required></li>
+
+
+
+              <input type="submit" value="Search">
+          </ul>
+
+
+
+        </form>
+        </section>
+        </center>
+
 
         </section>
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
