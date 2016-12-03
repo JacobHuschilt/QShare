@@ -1,4 +1,4 @@
-±±±±±±±<!doctype html>
+<!doctype html>
 <html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
@@ -11,24 +11,91 @@
         <!-- Place favicon.ico in the root directory -->
 
         <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
         <link rel="stylesheet" href="../css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+        <style>
+            img.logo {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            nav{
+                position:relative;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 150px;
+            }
+            .navbar-default{
+                background-color: rgba(255, 255, 255, 0.4);
+                border:none;
+            }
+            #logo{
+                position:absolute;
+                left:0;
+                top:6px;
+                width:auto;
+                height: 128px;
+            }
+            .logo-text{
+                position:absolute;
+                left: 128px;
+                top:50%;
+                transform: translateY(-50%);
+                font-family: 'Source Sans Pro', sans-serif;
+                font-weight: 700;
+                font-size: 100px;
+            }
+            nav input{
+                float:right;
+                display: inline-block;
+                margin-right: 20px;
+                top:50%;
+                //transform: translateY(-50%);
+            }
+        </style>
     </head>
-    <body style="background-color:powderblue">
+    <body background="../img/aboutBackground.jpg" style="margin:auto;">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <h1>About Us</h1>
-        <p>
-            QShare was made to faciliatate ridesharing in Kingston and beyond.<br />Created at a local MLH Hackathon event at Queen's University by the 4-musketeers.
-        </p>
-        <img src="../img/QShare_Logo@Medium.png" alt="QShare Logo">
-        <p>&copy;2016 4-Musketeers</p>
-        <nav class="navbar">
-
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <a href="index.html" class="navbar-brand">
+                    <img src="../img/QShare_Logo@Small.png" alt="QShare Logo" id="logo">
+                    <p class="logo-text">Share</p>
+                </a>
+                <div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li><input type="text" id="username"></li>
+						<li><input type="text" id="password"></li>
+						<li><button id="login">Log In</button></li>
+					</ul>
+				</div>
+            </div>
         </nav>
+        <div style="background-color:rgba(255, 255, 255, 0.5); padding-left:10px;padding-right:10px;margin-top:10px;">
+            <h1>About Us</h1>
+            <p>
+                QShare was made to facilitate ride-sharing in Kingston and beyond. Designed to be as user-friendly as possible, feedback is always welcome. Created at a local MLH Hackathon event at Queen's University by the 4-musketeers.
+            </p>
+            <img class="logo" src="../img/QShare_Logo_White@Medium.png" alt="QShare Logo">
+            <p style="margin-top:50px">&copy; 2016 4-Musketeers</p>
+        </div>
+
+
+
         <section class="main">
 
         </section>
