@@ -15,40 +15,37 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
-
-<!-- This is the code for the create form  -->
-      <div class="container">
-      <form class="" action="postRide.php" method="post">
-        <legend>Post A Ride!</legend>
-        <pre>
-          Price in dollars per person ($):
-          <input type="number" required="required" min="0" step="any" name="price" placeholder="20.00">
-          Departing From:
-          <input type="text" required="required" name="departure" placeholder="Kingston">
-          Destination:
-          <input type="text" required="required" name="destination" placeholder="Toronto">
-          Departing on:
-          <input type="date" required="required" name="date">
-          Between:
-          <input type="time" required="required" name="min"> and <input type="time" required="required" name="max">
-          Car Type:
-          <input type="text" name="car" placeholder="Van/Sedan">
-          Number of available seats:
-          <input type="number" min="1" name="seats" placeholder="3">
-          Is Shotgun available? (Front Seat):
-          Yes <input type="radio" name="shotgun" value="1"> No <input type="radio" name="shotgun" value="0">
-          Additional Information (Optional):
-          <input type="text" name="info" placholer="Will only pickup from Queens">
-          <input type="submit" name="submit" value="Post My Ride"> <input type="reset" name="reset" value="reset">
-        </pre>
-      </form>
-      </div>
-
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
         <!-- Add your site or application content here -->
+      <?php
+        $price = $_POST["price"];
+        $departure = $_POST["departure"];
+        $destination = $_POST["destination"];
+        $date = $_POST["date"];
+        $min = $_POST["min"];
+        $max = $_POST["max"];
+        $car = $_POST["car"];
+        $seats = $_POST["seats"];
+        $info = $_POST["info"];
+        $shotgun = $_POST["shotgun"];
+
+        //Testing the input reading
+        //echo $departure. "|" .$destination. "|" .$date. "|" .$min. "|" .$max. "|" .$price. "|" .$car. "|" .$seats. "|" .$shotgun. "|" .$info;
+
+        //Not enough time to learn SQL + Databases + set it up, so we use text files as backend for now
+        $rideFile = fopen("../curentRides.txt", "a") or fopen("../curentRides.txt", "w");
+        $newRide = $departure. "|" .$destination. "|" .$date. "|" .$min. "|" .$max. "|" .$price. "|" .$car. "|" .$seats. "|" .$shotgun. "|" .$info."\r\n";
+        fwrite($rideFile, $newRide);
+        fclose($rideFile);
+
+        header("location:../index.html");
+      ?>
+
+
+
+
         <nav class="navbar">
 
         </nav>
