@@ -19,22 +19,59 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!--Java SDK for Facebook Login -->
-        <div id="fb-root"></div>
-            <script>(function(d, s, id) {
-              var js, fjs = d.getElementsByTagName(s)[0];
-              if (d.getElementById(id)) return;
-              js = d.createElement(s); js.id = id;
-              js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
-              fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-            </script>
-
-        <!-- Add your site or application content here -->
-        <nav class="navbar">
-
-        </nav>
-        <section class="main">
+        <div class="main">
+            <nav class="navbar navbar-default">
+                <div class="container nav-container">
+                    <a href="index.html" class="navbar-brand">
+                        <img src="img/QShare_Logo@Small.png" alt="QShare Logo" id="logo">
+                        <p class="logo-text">Share</p>
+                    </a>
+                    <div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="collapse navbar-collapse" id="myNavbar">
+                        <form action="login.php" class="login">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><p>User Name</p></li>
+    							<li><input type="text" id="username"></li>
+                                <li><p>Password</p></li>
+                                <li><input type="password" id="password"></li>
+    							<li><input type="button" class="btn btn-default" id="login" value="Log In"></input></li>
+    						</ul>
+                        </form>
+					</div>
+                    <a href="about/index.html" class="about">About Us</a>
+                </div>
+            </nav>
+            <div class="container-full" id="main-background">
+                <div class="register">
+                    <h4>Register for a new account.</h4>
+                    <p><span class="glyphicon glyphicon-list-alt"></span></p>
+                    <form action="register.php">
+                        <p>First Name:</p>
+                        <input name="first-name" type="text">
+                        <p>Last Name:</p>
+                        <input name="last-name" type="text">
+                        <p>Date of Birth:</p>
+                        <input name="dob" type="date">
+                        <p>Email:</p>
+                        <input name="email" type="text" placeholder="example@example.com">
+                        <p>Password:</p>
+                        <input name="pass1" type="password">
+                        <p>Re-enter Password:</p>
+                        <input name="pass2" type="password">
+                        <input type="button" class="btn btn-default" value="REGISTER" id="register">
+                    </form>
+                </div>
+            </div>
+            <footer>
+                <p>Four Muskateers ©     2016</p>
+            </footer>
+        </div>
 
         </section>
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
