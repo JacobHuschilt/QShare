@@ -31,20 +31,39 @@
         $info = $_POST["info"];
         $shotgun = $_POST["shotgun"];
 
+
+        //Seating order, Passenger(Shotgun)/backLeft/backRight
+        if ($shotgun == "1") {
+          if ($seats == "1") {
+            $seatArray = "1|0|0";
+          }
+          elseif ($seats == "2") {
+            $seatArray = "1|1|0";
+          }
+          else {
+            $seatArray = "1|1|1";
+          }
+        }
+        else {
+          if ($seats == "1") {
+            $seatArray = "0|1|0";
+          }
+          else {
+            $seatArray = "0|1|1";
+          }
+        }
         //Testing the input reading
         //echo $departure. "|" .$destination. "|" .$date. "|" .$min. "|" .$max. "|" .$price. "|" .$car. "|" .$seats. "|" .$shotgun. "|" .$info;
 
         //Not enough time to learn SQL + Databases + set it up, so we use text files as backend for now
         $rideFile = fopen("../curentRides.txt", "a") or fopen("../curentRides.txt", "w");
-        $newRide = $departure. "|" .$destination. "|" .$date. "|" .$min. "|" .$max. "|" .$price. "|" .$car. "|" .$seats. "|" .$shotgun. "|" .$info."\r\n";
+        $newRide = $departure. "|" .$destination. "|" .$date. "|" .$min. "|" .$max. "|" .$price. "|" .$car. "|" .$seats. "|" .$shotgun. "|" .$info;
+        $newRide = $newRide. "|" .$seatArray. "\r\n";
         fwrite($rideFile, $newRide);
         fclose($rideFile);
 
         header("location:../index.html");
       ?>
-
-
-
 
         <nav class="navbar">
 
