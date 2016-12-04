@@ -29,8 +29,8 @@
           <input type="text" required="required" name="destination" placeholder="Toronto">
           Departing on:
           <input type="date" required="required" name="date">
-          Between:
-          <input type="time" required="required" name="min"> and <input type="time" required="required" name="max">
+          Between (24:00 hour clock format):
+          <input type="text" placeholder="1:00" name="min" pattern="([01]?[0-9]{1}|2[0-3]{1}):[0-5]{1}[0-9]{1}" id="24h"/> and <input type="text" name="max" placeholder="3:00" pattern="([01]?[0-9]{1}|2[0-3]{1}):[0-5]{1}[0-9]{1}" id="24h"/>
           Car Type:
           <input type="text" name="car" placeholder="Van/Sedan">
           Number of available seats:
