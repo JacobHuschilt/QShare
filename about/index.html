@@ -102,12 +102,27 @@
 
             <script type="text/javascript" src="https://app.seats.io/chart.js"></script>
             <script>
-              var seatPrice = 20;
+              var seatPrice = 20; // TODO change to input values
               var userCar = "demoUser";
+              var seatTakenList = [1, 1, 1]; // TODO change to input values
+              var seatList = {"FR": 0, "BL": 1, "BR": 2};
+              var selectedSeat = seatTakenList; // holds the selected seat, for saving purposes
+              
               var chart = new seatsio.SeatingChart({
                 divId: 'chart',
                 publicKey: "a7a1f4c1-bced-4745-b86b-ec6c674dc388",
                 event: userCar,
+                extraConfig: {
+                    seatList,
+                    seatTakenList,
+                },
+                isObjectVisible: function(object, extraConfig) {
+                    if (extraConfig.seatTakenList[extraConfig.seatList[object.id]] === 0) {
+                        return false;
+                    } else {
+                        return true;
+                    }
+                },
                 pricing: [
                   {'category': 1, 'price': seatPrice},
                   {'category': 2, 'price': seatPrice},
@@ -125,9 +140,11 @@
                 onObjectSelected: function (object) {
                   $("#lastAction").html("selected " + object.id);
                   // grab the selected object
+                  selectedSeat[extraConfig.seatList[object.id]] = 0;
                 },
                 onObjectDeselected: function (object) {
                   $("#lastAction").html("deselected " + object.id);
+                  selectedSeat[extraConfig.seatList[object.id]] = 1;
                 }
               }).render();
             </script>
