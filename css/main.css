@@ -111,6 +111,15 @@ textarea {
     background-size: cover;
     background-position: 50% 50%;
 }
+.main-c{
+    position:relative;
+    width:100%;
+    height: auto;
+    background:url("../img/map.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: 50% 50%;
+}
 .container-full{
     position:relative;
     width:100%;
@@ -170,6 +179,15 @@ nav input{
 nav ul p{
     font-size: 16px;
     margin-right:5px;
+}
+.about{
+    position:absolute;
+    top:5px;
+    right:10%;
+    color:rgb(65, 65, 65);
+    background-color: rgba(255, 255, 255, 0.4);
+    padding:2px;
+    border-radius:5px;
 }
 .register{
     position:relative;

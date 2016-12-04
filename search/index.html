@@ -8,9 +8,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="shortcut icon" href="../img/QShare_Favicon.ico">
         <!-- Place favicon.ico in the root directory -->
         <link href="search.css" type= "text/css" rel="stylesheet" >
-      	<link rel="stylesheet" href="./normalize.css">
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Sans+Pro:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="../css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
@@ -19,12 +23,51 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <nav class="navbar">
+        <div class="main-s">
+            <nav class="navbar navbar-default">
+                <div class="container nav-container">
+                    <a href="index.html" class="navbar-brand">
+                        <img src="../img/QShare_Logo@Small.png" alt="QShare Logo" id="logo">
+                        <p class="logo-text">Share</p>
+                    </a>
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav navbar-right">
+                          <li><a href="index.html">Search Page </a> </li>
+                          <li><a href="../create/index.html">Create Page </a></li>
+                          <li><a href="../about/index.html">About </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="container-full">
+                <section class="loginform cf">
+                    <form name="register" action="search.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+                      <ul>
+                          <li><label for="departure"> Departure</label>
+                          <input name="departure" placeholder="Ex. Toronto" required></li>
+                          <li><label for="destination"> Destination </label>
+                          <input name="destination" placeholder="Ex. Kingston" required></li>
+                          <li>
+                          <br>
+                          <label for ="date"> Travel Date </label>
+                          <input type="date" name="travelDate">
+                          <li><br><label for="timeWindow"> Time Window(Start)</label>
+                          <input name="startTime" placeholder="Ex. 6:00" required></li>
+                          <li><label for="timeWindow"> Time Window(End) </label>
+                          <input name="endTime" placeholder="Ex. 18:00" required></li>
 
-        </nav>
-        <section class="main">
+                          <li><label for="cost"> Max Price</label>
+                          <input name="cost" placeholder="Ex. $50" required></li>
 
 
+<<<<<<< HEAD
         <!-- Search functionality will be put here-->
         <section class="loginform cf">
         <form name="register" action="search.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
@@ -49,11 +92,20 @@
         </form>
         </section>
 
+=======
+>>>>>>> cd32c217146cd7471ccce4bba32cdd0a663991d7
 
+                          <input type="submit" value="Search">
+                      </ul>
+                    </form>
+                </section>
+            </div>
+        </div>
 
         </section>
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <script src="../js/plugins.js"></script>
         <script src="../js/main.js"></script>
 
