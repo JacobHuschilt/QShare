@@ -18,6 +18,7 @@
         <link rel="shortcut icon" href="img/QShare_Favicon.ico">
         <!-- Place favicon.ico in the root directory -->
 
+        <link rel="stylesheet" href="../css/create.css">
         <link rel="stylesheet" href="../css/normalize.css">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/main.css">
@@ -66,7 +67,7 @@
         //echo $departure. "|" .$destination. "|" .$date. "|" .$min. "|" .$max. "|" .$price. "|" .$car. "|" .$seats. "|" .$shotgun. "|" .$info;
 
         //Not enough time to learn SQL + Databases + set it up, so we use text files as backend for now
-        $rideFile = fopen("../curentRides.txt", "a") or fopen("../curentRides.txt", "w");
+        $rideFile = fopen("../currentRides.txt", "a") or fopen("../currentRides.txt", "w");
         $newRide = $departure. "|" .$destination. "|" .$date. "|" .$min. "|" .$max. "|" .$price. "|" .$car. "|" .$seats. "|" .$shotgun. "|" .$info;
         $newRide = $newRide. "|" .$seatArray. "\r\n";
         fwrite($rideFile, $newRide);
