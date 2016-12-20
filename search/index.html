@@ -48,7 +48,7 @@
             </nav>
             <div class="container-full">
                 <section class="loginform cf">
-                    <form name="register" action="search.php" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+                    <form name="register" action="confirm.html" method="post" accept-charset="utf-8" enctype="multipart/form-data">
                       <ul>
                           <li><label for="departure"> Departure</label>
                           <input name="departure" placeholder="Ex. Toronto" required></li>
@@ -62,8 +62,10 @@
                           <input name="startTime" placeholder="Ex. 6:00" required></li>
                           <li><label for="timeWindow"> Time Window(End) </label>
                           <input name="endTime" placeholder="Ex. 18:00" required></li>
+
                           <li><label for="cost"> Max Price</label>
                           <input name="cost" placeholder="Ex. $50" required></li>
+
                           <input type="submit" value="Search">
                       </ul>
                     </form>

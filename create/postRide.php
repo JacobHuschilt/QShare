@@ -13,17 +13,6 @@
         <link rel="stylesheet" href="../css/normalize.css">
         <link rel="stylesheet" href="../css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <link rel="shortcut icon" href="img/QShare_Favicon.ico">
-        <!-- Place favicon.ico in the root directory -->
-
-        <link rel="stylesheet" href="../css/create.css">
-        <link rel="stylesheet" href="../css/normalize.css">
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../css/main.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Source+Sans+Pro:400,700" rel="stylesheet">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -42,39 +31,20 @@
         $info = $_POST["info"];
         $shotgun = $_POST["shotgun"];
 
-
-        //Seating order, Passenger(Shotgun)/backLeft/backRight
-        if ($shotgun == "1") {
-          if ($seats == "1") {
-            $seatArray = "1|0|0";
-          }
-          elseif ($seats == "2") {
-            $seatArray = "1|1|0";
-          }
-          else {
-            $seatArray = "1|1|1";
-          }
-        }
-        else {
-          if ($seats == "1") {
-            $seatArray = "0|1|0";
-          }
-          else {
-            $seatArray = "0|1|1";
-          }
-        }
         //Testing the input reading
         //echo $departure. "|" .$destination. "|" .$date. "|" .$min. "|" .$max. "|" .$price. "|" .$car. "|" .$seats. "|" .$shotgun. "|" .$info;
 
         //Not enough time to learn SQL + Databases + set it up, so we use text files as backend for now
         $rideFile = fopen("../currentRides.txt", "a") or fopen("../currentRides.txt", "w");
-        $newRide = $departure. "|" .$destination. "|" .$date. "|" .$min. "|" .$max. "|" .$price. "|" .$car. "|" .$seats. "|" .$shotgun. "|" .$info;
-        $newRide = $newRide. "|" .$seatArray. "\r\n";
+        $newRide = $departure. "|" .$destination. "|" .$date. "|" .$min. "|" .$max. "|" .$price. "|" .$car. "|" .$seats. "|" .$shotgun. "|" .$info."\r\n";
         fwrite($rideFile, $newRide);
         fclose($rideFile);
 
         header("location:../index.html");
       ?>
+
+
+
 
         <nav class="navbar">
 

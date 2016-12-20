@@ -1,0 +1,2 @@
+Kingston|To|2016-12-31|12:59|12:59|20|Van|3|1|
+Kingston|Toronto|2016-12-31|12:59|18:00|20|Van|3|1|This is info line
